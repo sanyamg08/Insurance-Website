@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate')%>
+
+<h2><%= user.username%></h2>
+
+<h4><a href="/products/new">Add a New Product</a></h4>
+
+	
+<% for(let product of user.products) {%>
+<div class="card mb-3">
+		<div class="row">	
+			
+			<div class="col-md-4">
+				<img src="<%=product.image%>" class="img-fluid">
+			</div>
+			<div class="col-md-8">
+				<div class="card-body">
+					<h5 class="card-title"><%=product.title%></h5>
+					<h6 class="card-title">$<%=product.price%></h6>
+				<p><%=product.description%></p>
+				</div>
+			</div>
+				</div>
+	</div>
+<% }%>
