@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%>
+<h1>All Insurances</h1>
+<% for(let insurance of insurances){ %>
+	<div class="card mb-3">
+		<div class="row">	
+			
+			<div class="col-md-2">
+				<img src="<%=insurance.image%>" class="img-fluid">
+			</div>
+			<div class="col-md-4">
+				<div class="card-body">
+					<h5 class="card-title"><%=insurance.title%></h5>
+				<p><a href="/insurances/<%=insurance._id%>" class="btn btn-primary mt-1">View <%=insurance.title%></a></p>
+				</div>
+			</div>
+				</div>
+	</div>
+<% } %>
+
